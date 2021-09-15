@@ -11,9 +11,9 @@ Diberikan sebuah soal dengan format zip yang terkunci, dan didalamnya terdapat f
 1. Ekstrak zip dengan masukkan password yang telah diberikan dan didapatkan file berekstensi **.ova**.
 2. Jalankan file OVA. (bisa menggunakan VirtualBox atau VMWare)
 3. Login menggunakan username dan password **guest::guest**.
-4. Lihat isi file **/etc/passwd** untuk melihat list user. Didapatkan username lain yaitu **ellen**.<br/>
+4. Lihat isi file **/etc/passwd** untuk melihat list user. Didapatkan username lain yaitu **ellen**.<br/><br/>
     ``cat /etc/passwd``
-5. Lihat isi file **/etc/shadow** untuk melihat list password user.<br/>
+5. Lihat isi file **/etc/shadow** untuk melihat list password user.<br/><br/>
     ``cat /etc/shadow``
 6. Bruteforce password dengan menggunakan tools **John The Ripper** dan wordlist rockyou.txt.
 	Karena user **guest** tidak bisa menginstall package, maka kita harus mengcopy manual username dan password ke terminal milik kita.
