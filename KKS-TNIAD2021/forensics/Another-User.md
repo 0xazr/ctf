@@ -26,3 +26,4 @@ Diberikan sebuah soal dengan format zip yang terkunci, dan didalamnya terdapat f
 
 ## Flag
 KKST2021{ellen:ihateyou}
+
