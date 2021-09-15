@@ -16,11 +16,11 @@ Diberikan sebuah soal dengan format zip yang terkunci, dan didalamnya terdapat f
 5. Lihat isi file **/etc/shadow** untuk melihat list password user.<br/><br/>
     ``cat /etc/shadow``
 6. Bruteforce password dengan menggunakan tools **John The Ripper** dan wordlist rockyou.txt.
-	Karena user **guest** tidak bisa menginstall package, maka kita harus mengcopy manual username dan password ke terminal milik kita.
-	Command :<br/>
+	Karena user **guest** tidak bisa menginstall package, maka kita harus mengcopy manual username dan password ke terminal milik kita.<br/>
+	Command :<br/><br/>
 	``john --wordlist=wordlist/rockyou.txt pass``<br/>
 	
-	dengan isi file pass :<br/>
+	dengan isi file pass :<br/><br/>
 	``ellen:$6$2MEFal4T$iq0DtS8CD4CXEdST5MT6hmhK2ERdgPqJs6kzHImiFgnE34UwNdAwgig/XsyLRzRnxxtNGKLWMCzpTlAHO2l0k/:1002:1002::/home/ellen:/bin/bash``<br/>
 7. Didapatkan password **ellen** adalah **ihateyou**
 
