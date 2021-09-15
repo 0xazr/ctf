@@ -1,7 +1,7 @@
 # Another-User
-`Kami menyita sebuah mesin dari terduga pelaku perentasan pada website sebuah perusahaan, di situ diberikan sebuah akun yang dapat masuk ke dalam sebuah mesinnya, dapatkah kamu mendapatkan akun selain **guest**? KKST2021{username:password}
+Kami menyita sebuah mesin dari terduga pelaku perentasan pada website sebuah perusahaan, di situ diberikan sebuah akun yang dapat masuk ke dalam sebuah mesinnya, dapatkah kamu mendapatkan akun selain **guest**? KKST2021{username:password}
 
-Password VM : **4d1b54eeaceb5277ea022f7b42b53113**`
+Password VM : **4d1b54eeaceb5277ea022f7b42b53113**
 
 ##  Penjelasan
 Diberikan sebuah soal dengan format zip yang terkunci, dan didalamnya terdapat file OVA. Temukan akun selain user **guest** untuk mendapatkan flag.
